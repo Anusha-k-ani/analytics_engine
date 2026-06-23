@@ -8,9 +8,9 @@ def calculate_transaction(unit_price: float, quantity: int, currency: str):
     total = unit_price * quantity
 
     return {
-        "transaction_total": round(total, 2),
-        "formatted_summary": f"Total amount is {total:.2f} {currency}"
-    }
+    "transaction_total": f"{total:.2f}",
+    "formatted_summary": f"Total amount is {total:.2f} {currency}"
+}
 
 
 @router.get("/store/{store_id}")
